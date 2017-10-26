@@ -10,3 +10,9 @@ Seems like Staging Area adds some flexibility in commiting new files to the repo
 
 For now. I don't completely understand, how this Staging Area is working. Is it some hidden directory, where copies of files are placed, or just some index (may be in a file) with the list of files to be saved to the repository. 
 And does the repository receive the copies of only staged files during the commit and during the checkaout all the rest files are received from previous commits?
+
+# How can you use the staging area to make sure you have one commit per logical change?
+
+You can choose to move only those files to the Staging area that you want to see in the upcoming commit. Thus you can divide all your changed files into groups to commit them separately.
+
+But there can be problem, if there are several logical changes in one file. As you can commit file only as a hole, and not somehow separately.
