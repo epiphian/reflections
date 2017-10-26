@@ -4,6 +4,8 @@ Git creates a hidden .git directory. Where it somehow saves the history of commi
 
 # How is the staging area different from the working directory and the repository? What value do you think it offers?
 
+Staging area contains only those changed files that you intentionaly decided to move there, but whic are not yet commited to the Repository. There can be more changed files in the Working directory. 
+
 Seems like Staging Area adds some flexibility in commiting new files to the repository. It allows to choose which of the changed files in the Working directory should be saved to the Repository. If you wish to add only part of the changed files to next commit (may be becouse of logical separation of changes), Staging area helps you with this.
 
 For now. I don't completely understand, how this Staging Area is working. Is it some hidden directory, where copies of files are placed, or just some index (may be in a file) with the list of files to be saved to the repository. 
