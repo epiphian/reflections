@@ -1,0 +1,42 @@
+#How does diff help to find bugs in (code) files?
+
+It shows exact blocks of lines, where there were any changes.
+By looking through them you can find possible mistakes much faster. It may take much longer if you try to find differences just by comparing two files your self. In such a case, you'll need to go thour all the lines, checking if there were any changes at all. It requires high concentration and is very exhausing. Diff quickly pickes all changes for you, and all you need is just to select, which of them contain an error.
+
+#How could having easy access to the entire history of a file make you a more efficient programmer in the long term?
+
+You can quickly go to previous versions - previous state and go "another way" from there.
+But what if you want to integrate some part of old file into new one? How can you do it more effectively? 
+Faster than: goto v1, save it (or needed part) in separate place, goto v2, insert needed part from saved place, save as v3
+Need better variant.
+
+# What do you think are the pros and cons of manually choosing when to create a commit, like you do in Git, vs having versions automatically saved, like Google Docs does?
+
+Manual.
+Pros: You better understand when some logical part is finished and can be saved. Automatic saving can lead to too small or too big commits (you haven't finished needed changes/ you have done several important changes during one save)
+
+Cons: you may forget to save changes (e.g while you're in the rush of coding) which will result in too big commits. Automation will create at least some saves. May be not the best from the logic of changes, but it will still be somethign. If somethig happens with your PC while you are working, you may loos all your results without saves.
+
+# Why do you think some version control systems, like Git, allow saving multiple files in one commit, while others, like Google Docs, treat each file separately?
+
+In programming the changes for the same logical feature may be spred around multiple files. And information about this changes should be saved together in one "item". If you divide these changes into several commits it will increase complexity and lower donw one's ability to understand and track chanes' history.
+
+In usual documents this group changes may be not so important. That is why Google Docs save separate changes for each file.
+
+# How can you use the commands git log and git diff to view the history of files?
+
+git log - will  show the short version of commits' history with id, date, author and message.
+
+git log --stat will also show short info about changes made in each commit: the number of files changed and the total number of added/deletet lines across all files in this commit.
+
+git diff id1 id2 - shows the exact changes in each file of the commit, marking this changes with "+"/"-" signs and color (if you  use color scheame)
+
+# How might using version control make you more confident to make changes that could break something?
+
+With version control you save the history of versions and you can easily go back to previous versions to see how they were different.
+
+But for now I need some leaner way of using these tools.
+E.g. I want some faster way to search for the commit where something was broken. The way better than just moving back by 1 commit and checking. 
+Plus, is there some faster way for checknig the code? I mean, if I find that there is a bug in code, I may need to write some test for checking it. And how should I run this test on each of previous commit without copipasting it every time?
+
+And what is next? When I find the "broken" commit, how should I quickly add the fix for this commit to the changes of the master commit? In some exact quick steps.
