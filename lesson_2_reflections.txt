@@ -1,0 +1,10 @@
+# What happens when you initialize a repository? Why do you need to do it?
+
+Git creates a hidden .git directory. Where it somehow saves the history of commits.
+
+# How is the staging area different from the working directory and the repository? What value do you think it offers?
+
+Seems like Staging Area adds some flexibility in commiting new files to the repository. It allows to choose which of the changed files in the Working directory should be saved to the Repository. If you wish to add only part of the changed files to next commit (may be becouse of logical separation of changes), Staging area helps you with this.
+
+For now. I don't completely understand, how this Staging Area is working. Is it some hidden directory, where copies of files are placed, or just some index (may be in a file) with the list of files to be saved to the repository. 
+And does the repository receive the copies of only staged files during the commit and during the checkaout all the rest files are received from previous commits?
