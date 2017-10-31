@@ -16,3 +16,24 @@ And does the repository receive the copies of only staged files during the commi
 You can choose to move only those files to the Staging area that you want to see in the upcoming commit. Thus you can divide all your changed files into groups to commit them separately.
 
 But there can be problem, if there are several logical changes in one file. As you can commit file only as a hole, and not somehow separately.
+
+# What are some situations when branches would be helpful in keeping your history organized? How would branches help?
+
+Branch is a place to make experimental changes apart from main programm development in the main branch.
+
+?But I still think I don't feel comfortable with branches and reasons when to use them and when not.
+
+# How do the diagrams help you visualize the branch structure?
+It adds visual structure to the listed commits and there belonging to different brances, when you use --graph for several branches. It makes them more understandable, but... still some ambiguity about how will it look after merges and so on...
+
+# What is the result of merging two branches together? Why do we represent it in the diagram the way we do?
+
+It results in a commit combining (in some way) tip commits from the merged branches. And from now on, only one of these branched will automatically grow with new commits.
+
+# What are the pros and cons of Git’s automatic merging vs. always doing merges manually?
+
+Automatic merging saves some time as you don't need to compare merged files yourself.
+
+But automatic merge can make mistakes on what to include in final versions of commit files. It may automatically delete some text that you would like to have or keep something you'd prefer to remove.
+
+So you choose among fast merge or full correctness.
